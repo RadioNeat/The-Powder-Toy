@@ -83,7 +83,7 @@
 #define GT_PGOL 85
 #define GT_DMOE 86
 #define GT_34 87
-#define GT_LLIF 88
+#define GT_LONG 88
 #define GT_STAN 89
 #define GT_SEED 134
 #define GT_MAZE 135
@@ -97,6 +97,15 @@
 #define GT_STAR 144
 #define GT_FROG 145
 #define GT_BRAN 146
+#define GT_LFOD 147
+#define GT_PLIF 148
+#define GT_DOT 149
+#define GT_GEMS 150
+#define GT_LOW 151
+#define GT_ANTI 152
+#define GT_TREE 153
+#define GT_CRCF 154
+#define GT_DLIF 155
 
 //New IDs for GOL types
 #define NGT_GOL 0
@@ -109,7 +118,7 @@
 #define NGT_PGOL 7
 #define NGT_DMOE 8
 #define NGT_34 9
-#define NGT_LLIF 10
+#define NGT_LONG 10
 #define NGT_STAN 11
 #define NGT_SEED 12
 #define NGT_MAZE 13
@@ -123,6 +132,15 @@
 #define NGT_STAR 21
 #define NGT_FROG 22
 #define NGT_BRAN 23
+#define NGT_LFOD 24
+#define NGT_PLIF 25
+#define NGT_DOT 26
+#define NGT_GEMS 27
+#define NGT_LOW 28
+#define NGT_ANTI 29
+#define NGT_TREE 30
+#define NGT_CRCF 31
+#define NGT_DLIF 32
 
 //replace mode / specific delete flags
 #define REPLACE_MODE 0x1

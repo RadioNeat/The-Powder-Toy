@@ -17,7 +17,7 @@ gol_menu * LoadGOLMenu(int & golMenuCount)
 		{"PGOL",	PIXPACK(0xE05010), 7, "Pseudo Life: B357/S238"},
 		{"DMOE",	PIXPACK(0x500000), 8, "Diamoeba: B35678/S5678"},
 		{"34",		PIXPACK(0x500050), 9, "34: B34/S34"},
-		{"LLIF",	PIXPACK(0x505050), 10, "Long Life: B345/S5"},
+		{"LONG",	PIXPACK(0x505050), 10, "Long Life: B345/S5"},
 		{"STAN",	PIXPACK(0x5000FF), 11, "Stains: B3678/S235678"},
 		{"SEED",	PIXPACK(0xFBEC7D), 12, "Seeds: B2/S"},
 		{"MAZE",	PIXPACK(0xA8E4A0), 13, "Maze: B3/S12345"},
@@ -30,7 +30,16 @@ gol_menu * LoadGOLMenu(int & golMenuCount)
 		{"FRG2",	PIXPACK(0x00FF00), 20, "Like Frogs rule: B3/S124/3"},
 		{"STAR",	PIXPACK(0x0000FF), 21, "Like Star Wars rule: B278/S3456/6"},
 		{"FROG",	PIXPACK(0x00AA00), 22, "Frogs: B34/S12/3"},
-		{"BRAN",	PIXPACK(0xCCCC00), 23, "Brian 6: B246/S6/3"}
+		{"BRAN",	PIXPACK(0xCCCC00), 23, "Brian 6: B246/S6/3"},
+		{"LFOD",	PIXPACK(0x355A8E), 24, "Live Free or Die: B2/S0"},
+		{"PLIF",	PIXPACK(0xF353FF), 25, "Pseudo GOL 2: B34/S23"},
+		{"DOT",		PIXPACK(0x1A13D1), 26, "DotLife: B3/S023"},
+		{"GEMS",	PIXPACK(0xD7383E), 27, "Gems: B3457/S4568"},
+		{"LOW",		PIXPACK(0xEAA91E), 28, "LowLife: B3/S13"},
+		{"ANTI",	PIXPACK(0x727272), 29, "AntiLife, exploding life with GOL inside: B0123478/S01234678"},
+		{"TREE",	PIXPACK(0x42042A), 30, "H-trees: B1/S012345678"},
+		{"CRCF",	PIXPACK(0xE39069), 31, "Corrosion of Conformity: B3/S124"},
+		{"DLIF",	PIXPACK(0x445566), 32, "DryLife: B37/S23"}	
 	};
 	golMenuCount = NGOL;
 	gol_menu * golMenuT = (gol_menu*)malloc(NGOL*sizeof(gol_menu));
@@ -54,7 +63,7 @@ int * LoadGOLRules(int & golRuleCount)
 		{0,0,1,3,0,2,0,2,1,2},//PGOL
 		{0,0,0,2,0,3,3,3,3,2},//DMOE
 		{0,0,0,3,3,0,0,0,0,2},//34
-		{0,0,0,2,2,3,0,0,0,2},//LLIF
+		{0,0,0,2,2,3,0,0,0,2},//LONG
 		{0,0,1,3,0,1,3,3,3,2},//STAN
 		{0,0,2,0,0,0,0,0,0,2},//SEED
 		{0,1,1,3,1,1,0,0,0,2},//MAZE
@@ -68,6 +77,15 @@ int * LoadGOLRules(int & golRuleCount)
 		{0,0,2,1,1,1,1,2,2,6},//STAR
 		{0,1,1,2,2,0,0,0,0,3},//FROG
 		{0,0,2,0,2,0,3,0,0,3},//BRAN
+		{1,0,2,0,0,0,0,0,0,2},//LFOD
+		{0,0,1,3,2,0,0,0,0,2},//PLIF
+		{1,0,1,3,0,0,0,0,0,2},//DOT
+		{0,0,0,2,3,3,1,2,1,2},//GEMS
+		{0,1,0,3,0,0,0,0,0,2},//LOW
+		{3,3,3,3,3,0,1,3,3,2},//ANTI
+		{1,3,1,1,1,1,1,1,1,2},//TREE
+		{0,1,1,2,1,0,0,0,0,2},//CRCF
+		{0,0,1,3,0,0,0,2,0,2},//DLIF
 	};
 	golRuleCount = NGOL+1;
 	int * golRulesT = (int*)malloc((golRuleCount*10)*sizeof(int));
@@ -89,7 +107,7 @@ int * LoadGOLTypes(int & golTypeCount)
 		GT_PGOL,
 		GT_DMOE,
 		GT_34,
-		GT_LLIF,
+		GT_LONG,
 		GT_STAN,
 		GT_SEED,
 		GT_MAZE,
@@ -103,6 +121,15 @@ int * LoadGOLTypes(int & golTypeCount)
 		GT_STAR,
 		GT_FROG,
 		GT_BRAN,
+		GT_LFOD,
+		GT_PLIF,
+		GT_DOT,
+		GT_GEMS,
+		GT_LOW,
+		GT_ANTI,
+		GT_TREE,
+		GT_CRCF,
+		GT_DLIF,
 	};
 	golTypeCount = NGOL;
 	int * golTypesT = (int*)malloc((golTypeCount)*sizeof(int));
